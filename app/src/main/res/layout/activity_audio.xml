@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AudioActivity">
+
+
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/ic_voice_black"
+        />
+
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRecord"
+
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="52dp"
+
+        android:text="Play"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRecord"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="80dp"
+        android:text="Stop">
+    </Button>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnStop"
+        android:layout_marginLeft="80dp"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/btn_stop_rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnStop"
+        android:layout_marginLeft="70dp"
+        android:layout_toRightOf="@id/btn_save"
+        android:text="Stop" />
+
+
+
+</RelativeLayout>

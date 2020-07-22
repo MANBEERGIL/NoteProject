@@ -1,0 +1,168 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dash_parent_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/dash_parent_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/dashboard_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="false"
+                android:letterSpacing="0.05"
+                android:padding="10dp"
+                android:text="Notes"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="29sp"/>
+
+
+        <com.example.NoteProject.Utils.ShadowLayout
+            android:id="@+id/spinner_sl"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="@color/share_shadow"
+            app:sl_shadow_distance="5dp"
+            app:sl_shadow_radius="5dp">
+
+
+            <RelativeLayout
+                android:id="@+id/spinner_parent_rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_month_view_background"
+                android:padding="7dp">
+
+                <TextView
+                    android:id="@+id/mdw_view_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/drop_down"
+                    android:letterSpacing="0.1"
+                    android:text="MONTH VIEW"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/arrow_down_iv0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/mdw_view_tv"
+                    android:src="@mipmap/drop_down"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/spinner_parent_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_month_view_background"
+                android:padding="7dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/arrow_down_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/spinner"
+                    android:src="@mipmap/drop_down"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </com.example.NoteProject.Utils.ShadowLayout>>
+        </RelativeLayout>
+        <SearchView
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="visible"
+            android:layout_below="@id/dash_parent_rl"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categories_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/etSearch"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="4dp"
+            android:visibility="visible">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+        <!--Add event-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+
+            <ImageView
+                android:id="@+id/add_event_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/addb" />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>
+
+
+
